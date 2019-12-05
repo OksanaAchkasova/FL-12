@@ -13,7 +13,7 @@
       <div id="container">
         <div id="content" role="main">
         <header>
-          <a><img src="logo.png" alt="Logo of Epam"></a>
+          <img src="logo.png" alt="Logo of Epam">
           <h1>HTML Elements</h1>
           <hr>
           <nav>
@@ -21,9 +21,9 @@
             <a href="#headings"><b>Headings</b></a> 
             <a href="#textFormats"><b>Text formats</b></a> 
             <a href="#typesLists"><b>Types of lists</b></a> 
-            <a href=""><b>Table</b></a> 
-            <a href=""><b>Blockquotes</b></a> 
-            <a href=""><b>Registration</b></a> 
+            <a href="table"><b>Table</b></a> 
+            <a href="blcq"><b>Blockquotes</b></a> 
+            <a href="regForm"><b>Registration</b></a> 
           </nav>
           <hr>
         </header>
@@ -79,18 +79,24 @@
               <p>Article description</p>
             </article>
             <h3>Preformatted Text</h3>
-            <pre>Text in a <strong>pre</strong> element
+            <pre>
+
+Text in a <strong>pre</strong> element
 is displayed in a fixed-width
 font, and it preserves
 both           <b>spaces</b> and
-<b>line breaks</b></pre>
+<b>line breaks</b>
+
+</pre>
             <h3>This is code</h3>
             <pre><code>
 .flex {
 display: flex;
 justify-content: justify;
 aliign-items: center;
-} </code></pre>
+}
+
+</code></pre>
         </section>
         <section id="typesLists">
           <h2>Unordered Wish List</h2>
@@ -125,15 +131,64 @@ aliign-items: center;
             <dt>JavaScript</dt>
             <dd>JavaScript is a scripting languages, primarily used on the Web.</dd>
           </dl>
-
           <span>Select for learning</span>
           <select>
               <option value="js">JS</option>
               <option value="html">HTML</option>
               <option value="css">CSS</option>
             </select>
-
         </section>  
+        <hr>
+        <hr>
+        <section id="table">
+          <h2>Table</h2>
+          <table>
+              <tr>
+                <th>Skill</th>
+                <th>Training</th>
+                <th>City</th>
+              </tr>
+              <tr>
+                <td>JAVA</td>
+                <td>JAVA development training</td>
+                <td>Lviv</td>
+              </tr>
+              <tr>
+                <td>JAVASCRIPT</td>
+                <td>FRONT-END development</td>
+                <td>Kharkiv</td>
+              </tr>
+              <tr>
+                <td>IOS</td>
+                <td>IOS winter 2019</td>
+                <td>Kyiv</td>
+              </tr>
+              <tr>
+                <td>DEVOPS</td>
+                <td>DEVOPS spring 2020</td>
+                <td>Dnipro</td>
+              </tr>
+            </table>
+        </section> 
+        <section id="blcq">
+          <h2>Blockquotes</h2>
+          <p>Let’s keep it simple. Italics are good to help set it off from the body text. Be sure to style the citation.</p>
+          <blockquote>"So if you want to go fast, if you want to get done quickly, if you want your code to be easy to write, make it easy to read."
+            <br> <a href="#">Robert C. Martin (Uncle Bob)</a> 
+          </blockquote>
+        </section>
+        <hr>
+        <div id="regForm">
+          <form>
+            <fieldset>
+              Username: <input type="text"><br>
+              Email: <input type="text"><br>
+              Password: <input type="text"><br>
+              <textarea cols="23" rows="4"></textarea>
+            </fieldset>
+            <button type="submit">Submit</button>  
+          </form>
+        </div>
         <footer>
             &copy; Copyright Epam Systems
         </footer>
