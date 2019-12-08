@@ -12,17 +12,25 @@
     background-color: white;    
 }
 
+.tm-banner-text {
+    text-shadow: 5px 5px 3px #333;
+    animation: 3s ease go-left; 
+}
+
+@keyframes go-left {
+    from {
+        margin-left: 200px;        
+      }
+    
+      to {
+        margin-left: 0%;        
+      }
+}
+
 #home, section, nav {
     box-shadow: 0 0 10px 1px rgba(61, 55, 61, 0.7);  
 }
 
-.tm-banner-text {
-    text-shadow: 5px 5px 3px #333;
-    transition-property: position;
-    transition-duration: .20s;
-    transition-timing-function: ease-in-out;
-}
- 
 .heading h2 {
     text-transform: uppercase;
     text-align: center;
@@ -70,8 +78,7 @@
 #contact_name:focus,
 #contact_email:focus,
 #contact_subject:focus {
-    background-color: lightskyblue;
-    border: 1px solid lightskyblue;
+    background-color: lightskyblue;    
     color: #55595c;
 }
 
@@ -79,22 +86,21 @@
 #contact_email,
 #contact_subject {
     border: none;
-    border-bottom: 1px solid lightskyblue; */
+    border-bottom: 1px solid lightskyblue;
    
 }
 
+#contact textarea {
+    resize: both;
+}
 .submit-btn {
     color: lightskyblue;
     border: 1px solid lightskyblue;
     background-color: #fff;
     display: block;
     margin-left: auto;
-}
-
-.submit-btn:hover {
-    background-color: lightskyblue;
-    border: 1px solid lightskyblue;
-    color: #55595c;
+    width: 100px;
+    height: 55px;     
 }
 
 p.tm-section-description {
@@ -104,15 +110,18 @@ p.tm-section-description {
 
 .flex-2-col {
     display: flex;
-    
+    align-items: center; 
+    justify-content: center;
+   
 }
 
 .flex-2-col h2 {
-    text-align: center; 
+    text-align: center;
 }
 
-.tm-content-box .flex-2-col {
+.blocks .flex-2-col {
     display: none;
+    content: none;
 }
 
 .gallery-container .tm-section-title:hover {
@@ -138,10 +147,22 @@ li.box-work:nth-child(odd) {
    padding: 10px; 
 }
 
+#ideas::before,
+section::before
+{
+    content: '';
+    border:20px solid transparent;
+    border-left: 20px solid lightskyblue;
+    border-top: 20px solid lightskyblue;
+    position: absolute;
+}
+
 @media print {
 
     nav, #about, #contact, .tm-team-img, .gallery-container, .carousel-indicators,
-    .img-fluid, .heading li:nth-child(1)::after, .heading li:nth-child(3)::after   {
+    .img-fluid, .heading li:nth-child(1)::after, .heading li:nth-child(3)::after, #ideas::before,
+    section::before   
+    {
         display: none;
     }
 
@@ -174,8 +195,8 @@ li.box-work:nth-child(odd) {
         padding: 0;
     }
 
-    .tm-banner {
-        padding-bottom: 10px;
+    .tm-banner, .blocks .flex-item {
+        margin-bottom: 15px;
     }
 
     .tm-content-box ol {
@@ -200,5 +221,6 @@ li.box-work:nth-child(odd) {
         text-indent: 25px;
         line-height: 1.5;
     } 
-   
+
+       
   }
