@@ -8,22 +8,19 @@
     width: 143px;
     height: 49px;
     border-radius: 4px;
-    background: #699900;    
+    background: $buttonColor;    
     border: 0px;
     color: #fff;
-    font: map-get($f_weight, d) 110% $fontSans;
-    // font-family: 'Source Sans Pro', sans-serif;
-    // font-weight: map-get($f_weight, d);
-    // font-size: 110%; 
-          
+    font: map-get($f_weight, d) 110% $fontSans;          
 }
 
 body {
     margin: 0px;  
-    width: 1920px;    
+    width: 1920px;
+    background: $bodyColor;    
     
     .header-wrap {        
-        background: url("../img/m-h-day.jpg") no-repeat;
+        background: $backgr;
         background-position-y: -278px;
         background-size: cover;
         border-bottom-right-radius: 50em 18em;
@@ -36,13 +33,14 @@ body {
             width: 30%;
             line-height: 1em;
             margin-bottom: 38px;
-            color: #2c2f3c;                     
+            color: $mainColor;
+                     
         }
 
         .header_heading::before {
             content: 'awesome';
-            color: #2c2f3c; 
-            background-color: #14a0c7;
+            color: $mainColor; 
+            background-color: $pseudoColor;
             position: absolute;
             left: 192px;
             top: 230px;
@@ -51,18 +49,18 @@ body {
         }
 
         .header_text {
-            font-family: $fontSans;
+            font-family: $headingTextFont;
             letter-spacing: 0.023em;
             line-height: 1.45em;
             white-space: pre-line;
-            color: #2c2f3c;
+            color:$mainColor;
             margin-bottom: 63px;
         }
 
         .landing-logo {
             
             p {
-                font-family: $fontHind;
+                font-family: $logoTextFont;
                 font-weight: map-get($f_weight, e);
                 font-size: 150%;
                 display: inline-flex;
@@ -71,7 +69,7 @@ body {
                 margin: 0px;   
                 padding-left: 14px;
                 line-height: 0.87em;
-                color: #2c2f3c;
+                color: $mainColor;
             
                 span {
                     font-size: 40%; 
@@ -101,18 +99,18 @@ main {
         font-weight: map-get($f_weight, d);
         font-size: 252%;
         margin: 32px 0px 27px 0px;
-        color: #2c2f3c;
+        color:$mainColor;
     }
 
     .section_text::before {
         content: 'adventure';
-        background-color: #14a0c7;
+        background-color: $pseudoColor;
         position: absolute;
         left: 974px;
         top: 753px;
         line-height: 1.7em;    
         height: 50px; 
-        color: #2c2f3c;
+        color:$mainColor;
     }
 
     .section_card_wrap {
@@ -121,7 +119,7 @@ main {
             flex-direction: row;
             margin: 27px 403px 27px 403px; 
             padding: 18px; 
-            background: #21232e;
+            background: $sectionColor;
             border: 0px;
             border-radius: 6px; 
             
@@ -144,12 +142,12 @@ main {
                     color: #fff;
                     font-family: $fontSans;
                     font-size: 150%;
-                    font-weight: map-get($f_weight, b);                    
+                    font-weight: map-get($f_weight, c);                    
                 }
 
                 .section_card_text {
                     color: #b7bbbd;
-                    font-family: $fontHind;
+                    font-family: $logoTextFont;
                     text-align: justify;  
                     line-height: 1.5em;  
                     font-weight: map-get($f_weight, b);
@@ -188,7 +186,7 @@ main {
 
     .section_banner {
         margin: 138px 361px 0px 361px;
-        background: linear-gradient(45deg, #699900, #2c5adc);
+        background: linear-gradient(45deg, $gradient1, $gradient2);
         border-radius: 6px; 
         display: flex;
         flex-direction: row;
@@ -206,25 +204,25 @@ main {
                 font-weight: map-get($f_weight, d);
                 font-size: 190%;                 
                 line-height: 1em;                
-                color: #2c2f3c;  
+                color: $mainColor;  
                 margin-top: 28px;
                 margin-bottom: 21px;  
             }
 
             .section_banner_heading::before {
                 content: 'start ';
-                background-color: #14a0c7;
+                background-color: $pseudoColor;
                 position: absolute;
                 left: 284px;
                 top: 14px;
                 line-height: 1.9em;    
                 height: 50px; 
-                color: #2c2f3c;
+                color: $mainColor;
             }
 
             .section_banner_text {
                 color: #b7bbbd;
-                font-family: $fontHind;
+                font-family: $logoTextFont;
                 font-weight: map-get($f_weight, b);
                 margin-bottom: 39px;
                 margin-top: 0px;                
@@ -241,7 +239,7 @@ main {
 
 footer {
     margin-top: -74px;
-    background: #21232e;
+    background: $sectionColor;
     z-index: 100;
     width: 100%;
 
@@ -260,7 +258,7 @@ footer {
             @extend .landing-logo;
     
             p {
-                font-family: $fontHind;
+                font-family: $logoTextFont;
                 font-weight: map-get($f_weight, e);
                 font-size: 150%;
                 display: inline-flex;
@@ -280,7 +278,7 @@ footer {
 
         .footer_text {
             color: #b7bbbd;
-            font-family: $fontHind;
+            font-family: $logoTextFont;
             text-align: left; 
             font-size: 90%;
             width: 289px;
@@ -290,7 +288,7 @@ footer {
 
         .footer-cr {
             color: #b7bbbd;
-            font-family: $fontHind;
+            font-family: $logoTextFont;
             text-align: justify; 
             padding-left: 85px; 
         }
