@@ -14,6 +14,22 @@
     font: map-get($f_weight, d) 110% $fontSans;          
 }
 
+@mixin logo__p {
+    font: map-get($f_weight, e) 150% $logoTextFont;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center; 
+    margin: 0px;   
+    padding-left: 14px;
+    line-height: 0.87em;
+
+    span {
+        font-size: 40%; 
+        font-weight: map-get($f_weight, c);                
+    }
+
+}
+
 body {
     margin: 0px;  
     width: 1920px;
@@ -27,25 +43,22 @@ body {
         padding: 20px 0px 176px 192px;         
         
         .header_heading {
-            font-family: $fontSans;
-            font-weight: map-get($f_weight, d);
-            font-size: 451%; 
+            font: map-get($f_weight, d) 451% $fontSans;             
             width: 30%;
             line-height: 1em;
             margin-bottom: 38px;
             color: $mainColor;
-                     
-        }
-
-        .header_heading::before {
-            content: 'awesome';
-            color: $mainColor; 
-            background-color: $pseudoColor;
-            position: absolute;
-            left: 192px;
-            top: 230px;
-            line-height: 0.4em;    
-            height: 50px;   
+                   
+            &::before {
+                content: 'awesome';
+                color: $mainColor; 
+                background-color: $pseudoColor;
+                position: absolute;
+                left: 192px;
+                top: 230px;
+                line-height: 0.4em;    
+                height: 50px;   
+            }
         }
 
         .header_text {
@@ -58,23 +71,9 @@ body {
         }
 
         .landing-logo {
-            
             p {
-                font-family: $logoTextFont;
-                font-weight: map-get($f_weight, e);
-                font-size: 150%;
-                display: inline-flex;
-                flex-direction: column;
-                align-items: center; 
-                margin: 0px;   
-                padding-left: 14px;
-                line-height: 0.87em;
-                color: $mainColor;
-            
-                span {
-                    font-size: 40%; 
-                    font-weight: map-get($f_weight, c);                
-                }
+                @include logo__p;
+                color: $mainColor;          
             }
         }
 
@@ -95,22 +94,21 @@ main {
 
     .section_text {
         text-align: center;
-        font-family: $fontHind; 
-        font-weight: map-get($f_weight, d);
-        font-size: 252%;
+        font: map-get($f_weight, d) 252% $fontHind;
         margin: 32px 0px 27px 0px;
         color:$mainColor;
-    }
+    
+        &::before {
+            content: 'adventure';
+            background-color: $pseudoColor;
+            position: absolute;
+            left: 974px;
+            top: 753px;
+            line-height: 1.7em;    
+            height: 50px; 
+            color:$mainColor;
+        }
 
-    .section_text::before {
-        content: 'adventure';
-        background-color: $pseudoColor;
-        position: absolute;
-        left: 974px;
-        top: 753px;
-        line-height: 1.7em;    
-        height: 50px; 
-        color:$mainColor;
     }
 
     .section_card_wrap {
@@ -140,17 +138,15 @@ main {
 
                 .section_card_heading {
                     color: #fff;
-                    font-family: $fontSans;
-                    font-size: 150%;
-                    font-weight: map-get($f_weight, c);                    
+                    font: map-get($f_weight, c) 150% $fontSans;                 
                 }
 
                 .section_card_text {
                     color: #b7bbbd;
                     font-family: $logoTextFont;
+                    font-weight: map-get($f_weight, b);
                     text-align: justify;  
                     line-height: 1.5em;  
-                    font-weight: map-get($f_weight, b);
                 }
 
                 .section_link {
@@ -168,7 +164,7 @@ main {
             
         }
 
-        .section_card:nth-child(3) {
+        .section_card:last-child {
             .section_card_img {
                  width: 460px;
                  height: 305px;
@@ -195,29 +191,26 @@ main {
         padding-left: 161px;
         padding-right: 161px;
         position: relative;
-        z-index: 200;
+        z-index: 2;
 
-        
         .section_banner_text_wrap {
             .section_banner_heading {
-                font-family: $fontSans;
-                font-weight: map-get($f_weight, d);
-                font-size: 190%;                 
+                font:  map-get($f_weight, d) 190%  $fontSans;           
                 line-height: 1em;                
                 color: $mainColor;  
                 margin-top: 28px;
                 margin-bottom: 21px;  
-            }
-
-            .section_banner_heading::before {
-                content: 'start ';
-                background-color: $pseudoColor;
-                position: absolute;
-                left: 284px;
-                top: 14px;
-                line-height: 1.9em;    
-                height: 50px; 
-                color: $mainColor;
+            
+                &::before {
+                    content: 'start ';
+                    background-color: $pseudoColor;
+                    position: absolute;
+                    left: 284px;
+                    top: 14px;
+                    line-height: 1.9em;    
+                    height: 50px; 
+                    color: $mainColor;
+                }
             }
 
             .section_banner_text {
@@ -240,7 +233,7 @@ main {
 footer {
     margin-top: -74px;
     background: $sectionColor;
-    z-index: 100;
+    z-index: 1;
     width: 100%;
 
 
@@ -249,7 +242,6 @@ footer {
         flex-direction: row;
         padding-top: 111px;
         padding-bottom: 58px;
-        
         justify-content: space-around;
         align-items: center;        
     
@@ -258,29 +250,15 @@ footer {
             @extend .landing-logo;
     
             p {
-                font-family: $logoTextFont;
-                font-weight: map-get($f_weight, e);
-                font-size: 150%;
-                display: inline-flex;
-                flex-direction: column;
-                align-items: center; 
-                margin: 0px;   
-                padding-left: 14px;
-                line-height: 0.87em;
-                color: #b7bbbd;
-            
-                span {
-                    font-size: 40%; 
-                    font-weight: map-get($f_weight, c);                
-                }
+                @include logo__p;
+                color: #b7bbbd;         
             }
         }
 
         .footer_text {
             color: #b7bbbd;
-            font-family: $logoTextFont;
             text-align: left; 
-            font-size: 90%;
+            font: 90% $logoTextFont;
             width: 289px;
             line-height: 1.5em;
             margin-left: -20px;          
