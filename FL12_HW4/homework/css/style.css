@@ -3,129 +3,150 @@ body {
   background: #fff;
   max-width: 1600px;
   min-width: 900px; }
-  body header .header-wrap .header-menu {
+
+.header-menu {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 85px;
+  background: #fff; }
+  .header-menu p {
+    font-weight: bold;
+    font-size: 110%;
+    font-family: 'Merriweather', serif;
+    color: #777;
+    letter-spacing: 0.24em;
+    margin: auto; }
+  .header-menu .main-nav {
+    list-style: none;
+    margin: auto; }
+    .header-menu .main-nav li {
+      display: inline-block; }
+    .header-menu .main-nav .nav-item-link {
+      text-decoration: none;
+      color: #777;
+      letter-spacing: 0.15em;
+      font-size: 90%;
+      font-family: 'Merriweather', serif;
+      display: inline-block;
+      padding-right: 60px; }
+      .header-menu .main-nav .nav-item-link:hover {
+        color: #bfba55; }
+
+.header-image {
+  background: url("../img/home-bg.jpg") no-repeat;
+  background-size: cover;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  .header-image::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    z-index: 1;
+    opacity: .6; }
+  .header-image .image-container {
+    z-index: 2;
+    color: #fff;
+    text-align: center; }
+    .header-image .image-container .hello {
+      font-weight: 600;
+      font-size: 400%;
+      font-family: 'Merriweather', serif;
+      margin-bottom: 20px; }
+    .header-image .image-container .lab {
+      font-size: 90%;
+      letter-spacing: 2px;
+      font-weight: 500;
+      color: #bfba55;
+      margin-bottom: 50px; }
+    .header-image .image-container .btn-discover {
+      border: none;
+      border-radius: 23px;
+      width: 160px;
+      height: 45px;
+      background: #fff;
+      color: #777;
+      font-weight: 600;
+      font-size: 60%;
+      font-family: 'Merriweather', serif;
+      letter-spacing: 2px; }
+      .header-image .image-container .btn-discover:hover {
+        color: #bfba55; }
+
+.blog-section {
+  padding-top: 20px;
+  max-width: 949px;
+  margin: auto; }
+  .blog-section .blog-item {
+    margin-top: 88px; }
+    .blog-section .blog-item img {
+      width: 100%; }
+    .blog-section .blog-item .blog-item-title {
+      font-weight: 600;
+      font-size: 170%;
+      font-family: 'Merriweather', serif;
+      color: #000; }
+    .blog-section .blog-item .blog-author-photo {
+      width: 45px;
+      height: 45px;
+      border-radius: 50%;
+      vertical-align: middle;
+      margin-right: 5px; }
+    .blog-section .blog-item span {
+      font-size: 17px;
+      color: #777;
+      margin-right: 15px; }
+    .blog-section .blog-item .blog-item-text {
+      font-size: 17px;
+      color: #777;
+      line-height: 1.5em;
+      letter-spacing: 0.03em;
+      margin-bottom: 40px; }
+    .blog-section .blog-item .btn-continue {
+      border: #ccc 1px solid;
+      border-radius: 23px;
+      width: 190px;
+      height: 50px;
+      background: #fff;
+      color: #777;
+      font-weight: 600;
+      font-size: 80%;
+      font-family: 'Merriweather', serif;
+      letter-spacing: 1px;
+      margin-bottom: 65px; }
+      .blog-section .blog-item .btn-continue:hover {
+        color: #bfba55; }
+      .blog-section .blog-item .btn-continue hr {
+        color: #ccc;
+        height: 1px;
+        border: none;
+        opacity: 0.1; }
+
+footer {
+  width: 100%;
+  height: 358px;
+  background: black;
+  margin: 0 auto;
+  color: #777; }
+  footer .footer-wraper {
     display: flex;
     justify-content: space-around;
-    align-items: center;
-    height: 85px;
-    background: #fff; }
-    body header .header-wrap .header-menu p {
-      font-weight: bold;
-      font-size: 110%;
-      font-family: 'Merriweather', serif;
-      color: #777;
-      letter-spacing: 0.24em;
-      margin: auto; }
-    body header .header-wrap .header-menu .main-nav {
-      list-style: none;
-      margin: auto; }
-      body header .header-wrap .header-menu .main-nav li {
-        display: inline-block; }
-      body header .header-wrap .header-menu .main-nav .nav-item-link {
-        text-decoration: none;
-        color: #777;
-        letter-spacing: 0.15em;
-        font-size: 90%;
-        font-family: 'Merriweather', serif;
-        display: inline-block;
-        padding-right: 60px; }
-        body header .header-wrap .header-menu .main-nav .nav-item-link:hover {
-          color: #bfba55; }
-  body .header-image {
-    background: url("../img/home-bg.jpg") no-repeat;
-    background-size: cover;
-    height: 100vh;
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center; }
-    body .header-image::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: #000;
-      z-index: 1;
-      opacity: .6; }
-    body .header-image .image-container {
-      z-index: 2;
+    align-items: flex-start;
+    padding-top: 80px; }
+    footer .footer-wraper div {
+      flex: 0 0 auto;
+      width: 27%; }
+    footer .footer-wraper h2 {
       color: #fff;
-      text-align: center; }
-      body .header-image .image-container .hello {
-        font-weight: 600;
-        font-size: 400%;
-        font-family: 'Merriweather', serif;
-        margin-bottom: 20px; }
-      body .header-image .image-container .lab {
-        font-size: 90%;
-        letter-spacing: 2px;
-        font-weight: 500;
-        color: #bfba55;
-        margin-bottom: 50px; }
-      body .header-image .image-container .btn-discover {
-        border: none;
-        border-radius: 23px;
-        width: 160px;
-        height: 45px;
-        background: #fff;
-        color: #777;
-        font-weight: 600;
-        font-size: 60%;
-        font-family: 'Merriweather', serif;
-        letter-spacing: 2px; }
-        body .header-image .image-container .btn-discover:hover {
-          color: #bfba55; }
-  body .blog-section {
-    padding-top: 20px;
-    max-width: 949px;
-    margin: auto; }
-    body .blog-section .blog-item {
-      margin-top: 88px; }
-      body .blog-section .blog-item img {
-        width: 100%; }
-      body .blog-section .blog-item .blog-item-title {
-        font-weight: 600;
-        font-size: 170%;
-        font-family: 'Merriweather', serif;
-        color: #000; }
-      body .blog-section .blog-item .blog-author-photo {
-        width: 45px;
-        height: 45px;
-        border-radius: 50%;
-        vertical-align: middle;
-        margin-right: 5px; }
-      body .blog-section .blog-item span {
-        font-size: 17px;
-        color: #777;
-        margin-right: 15px; }
-      body .blog-section .blog-item .blog-item-text {
-        font-size: 17px;
-        color: #777;
-        line-height: 1.5em;
-        letter-spacing: 0.03em;
-        margin-bottom: 40px; }
-      body .blog-section .blog-item .btn-continue {
-        border: #ccc 1px solid;
-        border-radius: 23px;
-        width: 190px;
-        height: 50px;
-        background: #fff;
-        color: #777;
-        font-weight: 600;
-        font-size: 80%;
-        font-family: 'Merriweather', serif;
-        letter-spacing: 1px;
-        margin-bottom: 65px; }
-        body .blog-section .blog-item .btn-continue:hover {
-          color: #bfba55; }
-        body .blog-section .blog-item .btn-continue hr {
-          color: #ccc;
-          height: 1px;
-          border: none;
-          opacity: 0.1; }
-  body footer {
-    width: 100%;
-    background: black;
-    margin: 0 auto; }
+      font-family: 'Merriweather', serif;
+      font-size: 26px; }
+    footer .footer-wraper p {
+      font-size: 18px;
+      line-height: 25px; }
